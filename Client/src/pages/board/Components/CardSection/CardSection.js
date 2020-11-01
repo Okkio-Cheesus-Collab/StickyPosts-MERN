@@ -3,8 +3,8 @@ import Classes from './CardSection.module.css';
 
 const CardSection = () => {
     return (
-        <div className={Classes.cardSection + " p-4"}>
-            <div className={Classes.cardHolder}>
+        <div className={Classes.cardSection}>
+            <div className={Classes.cardHolder + " my-auto mx-4"}>
                 <p>a</p>
             </div>
         </div>

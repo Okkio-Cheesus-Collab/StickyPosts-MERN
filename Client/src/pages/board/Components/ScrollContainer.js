@@ -4,7 +4,7 @@ const ScrollContainer = (props) => {
         <div style={{
             height: "100%",
             width: "100%",
-            overflow: "scroll"
+            overflowX: "scroll"
         }}>
             {props.children}
         </div>
