@@ -1,13 +1,12 @@
-import './App.css';
 import HomePage from './pages/Home';
 import Navbar from './components/NavBar/Navbar';
+import AppRouter from './Router';
+import './App.scss';
 
 function App() {
-  return (<>
-      <Navbar/>
-      <HomePage/>
-      </>
-  );
+    return (
+        <AppRouter />
+    );
 }
 
 export default App;

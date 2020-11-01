@@ -1,0 +1,12 @@
+.cardSection {
+    height: 100%;
+    width: fit-content;
+    background-color: var(--secondary);
+}
+
+.cardHolder {
+    background-color: green;
+    height: 75%;
+    width: 400px;
+    border-radius: 10px;
+}
