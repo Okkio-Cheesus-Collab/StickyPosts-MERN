@@ -11,7 +11,7 @@
     height:45%;
     width:100%;
     background-color: white;
-   
+   z-index: 1;
 }
 .welcomeLabel {
     margin-top:auto;
@@ -28,6 +28,8 @@
 }
 .createBoardBtn {
     align-self: center;
+}
+.createBoardBtn button {
     width:300px;
     padding: 15px;
     margin-top:50px;
@@ -35,13 +37,24 @@
     background-color: white;
     border: 1px solid rgb(108, 191, 255);
     border-radius: 34px;
-    outline:none;
+    outline:none !important;
     cursor: pointer;
     font-family: "Whitney Light";
     font-size: 24px;
     font-weight: normal;
 }
-.createBoardBtn:hover {
+.createBoardBtn button:hover {
     color:white;
     background-color: rgb(66, 173, 255);
+}
+.PostitBg {
+    position: absolute;
+    width:500px;
+    z-index: -2;
+    padding:0;
+    right:100;
+    left:0;
+    top:30px;
+    margin-left: auto;
+    margin-right:auto;
 }

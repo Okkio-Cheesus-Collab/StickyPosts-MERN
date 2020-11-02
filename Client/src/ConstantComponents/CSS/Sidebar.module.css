@@ -1,0 +1,16 @@
+.sidebarContainer {
+    top:60px;
+    position: absolute;
+    width: 100%;
+    height:100%;
+    z-index: 10;
+}
+.sidebarBody {
+    transition: 320ms ease-in-out;
+    background-color: rgb(121, 121, 121);
+    width:80px;
+    height:100%;
+}
+.sidebarBody:hover {
+    width:300px;
+}
