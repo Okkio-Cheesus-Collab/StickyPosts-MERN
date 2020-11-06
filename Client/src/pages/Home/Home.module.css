@@ -1,8 +1,7 @@
 .homeContainer {
-    margin-top:60px;
     display: flex;
     height:100%;
-    background-color: #23272A;
+    background-color: rgb(44, 47, 49);
     justify-content: center;
 }
 .homeCard {
@@ -11,7 +10,7 @@
     height:45%;
     width:100%;
     background-color: white;
-   z-index: 1;
+   z-index: 7;
 }
 .welcomeLabel {
     margin-top:auto;

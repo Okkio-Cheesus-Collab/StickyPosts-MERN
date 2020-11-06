@@ -16,6 +16,7 @@ code {
 }
 
 #root{
+  margin-top:60px;
   height:calc(100% - 60px);
   -webkit-touch-callout: none;
     -webkit-user-select: none; 
