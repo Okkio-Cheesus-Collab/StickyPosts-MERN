@@ -6,7 +6,7 @@ import { Droppable } from 'react-beautiful-dnd';
 const CardSection = (props) => {
     return (
         <div className={Classes.cardSection}>
-            <div className={Classes.cardHolder + " d-flex flex-column my-5 mx-4 p-3"}>
+            <div className={Classes.cardHolder + " d-flex flex-column my-5 mx-4 p-4"}>
                 <div className="h4 text-capitalize">{props.title}</div>
                 <Scrollbars className="position-relative" autoHide>
                     <Droppable droppableId={props.columnId}>
