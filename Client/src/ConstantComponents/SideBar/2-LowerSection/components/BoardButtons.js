@@ -8,7 +8,7 @@ const SidebarBtn = (props) => {
     
     return (
         <div className={classes.buttonContainer}>
-            <div className={classes.boardButton} onMouseEnter={props.toggleHover} onMouseLeave={props.toggleHover}>
+            <div className={classes.boardButton} onMouseEnter={props.toggleHoverDynamic} onMouseLeave={props.toggleHoverDynamic}>
                 {name.slice(0,2).toUpperCase()}
             </div>
             <div className={classes.buttonBanner}>

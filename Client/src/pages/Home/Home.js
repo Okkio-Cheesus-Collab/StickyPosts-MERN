@@ -2,10 +2,10 @@ import React from 'react';
 import HomeContainer from './Components/HomeContainer';
 
 
-const HomePage = () => {
+const Home = () => {
     return(<>
         <HomeContainer/>
         </>
     )
 }
-export default HomePage;
+export default Home;

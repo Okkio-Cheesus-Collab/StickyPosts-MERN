@@ -12,7 +12,7 @@ const Navbar = () => {
                 <h1 className={classes.logoLabel}>StickyPosts</h1>    
         </Link>
         <ul className={classes.navButtons}>
-            <li className={classes.loginButton}>Login</li>
+            <Link to="/login" className={classes.loginButton}>Login</Link>
         </ul>
     </nav>
     )
