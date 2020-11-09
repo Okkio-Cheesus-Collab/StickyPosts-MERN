@@ -33,15 +33,17 @@ a:hover {
 }
 .navButtons {
     margin-right:25%;
-    margin-top:auto;
 }
 .loginButton {
-    color:black;
+    text-align: center;
+    justify-self: flex-end;
+    list-style-type: none;
     font-family: "Whitney";
     font-size: 22px;
     font-weight: bold;
     width:100px;
     height:40px;
+    line-height: 40px;
     cursor: pointer;
 }
 .loginButton:hover {
