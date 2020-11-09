@@ -6,7 +6,7 @@ const LowerContainer = (props) => {
 
     return (
         <div className={classes.lowerBoard}>
-            <BoardButtons toggleHover={props.toggleHover}/>
+            <BoardButtons  toggleHoverDynamic={props.toggleHoverDynamic}/>
         </div>
     )
 }
