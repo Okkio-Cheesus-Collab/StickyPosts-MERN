@@ -1,0 +1,151 @@
+.sidebarBody {
+    padding:0;
+    width: 100%;
+    height:calc(100% - 60px);
+    z-index: 5;
+    transition: 220ms ease-in-out;
+    background-color: rgb(46, 46, 46);
+    width:80px;
+    height:100%;
+}
+.sidebarBody_active{
+    transition-delay: 500ms;
+    width:260px;
+}
+
+.upperBoard {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height:25%;
+    text-align: center;
+}
+.nameCardContainer {
+    display: flex;
+    cursor: pointer;
+}
+.nameCardContainer .profileIcon {
+    color:white;
+    line-height: 50px;
+    font-size: 22px;
+    margin-bottom: auto;
+    /* position: absolute; */
+    margin-left:10px;
+    min-width:55px;
+    height:55px;
+    border-radius: 35px;
+    border:2px solid white;
+    pointer-events: none;
+}
+
+.nameCardContainer .Name {
+    opacity: 0;
+    z-index: 6;
+    padding-left:30px;
+    transition: 150ms ease-in-out ;
+    line-height: 53px;
+    font-size: 22px;
+    font-family: "Whitney";
+    color:white;
+}
+.sidebarBody:hover .Name {
+    opacity: 1;
+}
+.createButton {
+    transition: 160ms ease-in-out ;
+    margin-top:30px;
+    color:white;
+    line-height: 50px;
+    font-size: 22px;
+    margin-left:10px;
+    min-width:55px;
+    width:55px;
+    height:55px;
+    border-radius: 35px;
+    border:2px solid white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+}
+.sidebarBody_active .createButton{
+    transition-delay: 500ms;
+    width:185px;
+}
+.createButton:hover{
+    transition-delay: 0s;
+    transition: 80ms ease-out!important;
+}
+.createButton:active {
+    background-color: rgb(50, 166, 255);
+}
+.createBtnSvg {
+    transition: 160ms ease-in-out ;
+    width:20px;
+    margin-left:15px;
+}
+.createBtnTxt {
+    font-size:0px;
+    margin-left:10px;
+    white-space: nowrap;
+    font-family: "Whitney";
+    opacity:0;
+    transition: 160ms ease-in-out ;
+}
+.sidebarBody_active .createBtnTxt{
+    opacity:1;
+    font-size:18px;
+    margin-left:15px;
+    transition-delay: 450ms;
+}
+.sideBarDivider {
+    align-self: center;
+    width:100%;
+    margin-right: auto;
+    margin-left: auto;
+    height:1px;
+    background-color: white;
+}
+.lowerBoard {
+    margin-top:10px;
+    height:auto;
+    text-align: center;
+}
+.buttonContainer{
+    cursor: pointer;
+}
+.boardButton {
+    transition: 160ms ease-in-out ;
+    color:white;
+    line-height: 50px;
+    font-size: 22px;
+    border-radius: 35px;
+    background-color: rgb(189, 62, 189);
+    width:55px;
+    height:55px;
+    position: absolute;
+    left:10px;
+    z-index: 7;
+}
+.buttonBanner {
+    transition: 160ms ease-in-out ;
+    color:white;
+    
+    line-height: 50px;
+    font-size: 0px;
+    border-radius: 35px;
+    background-color: rgb(90, 51, 105);
+    width:55px;
+    height:55px;
+    position: absolute;
+    left:10px;
+    z-index: 6;
+}
+.sidebarBody_active .buttonBanner{
+    margin-left:10px;
+    transition-delay: 500ms;
+    width:185px;
+    font-size: 22px;
+}
+
+

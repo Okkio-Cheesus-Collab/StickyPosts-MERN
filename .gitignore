@@ -2,11 +2,7 @@
 
 # dependencies
 /node_modules
-<<<<<<< HEAD
 /client/node_modules
-=======
-/Client/node_modules
->>>>>>> origin
 /.pnp
 .pnp.js
 
