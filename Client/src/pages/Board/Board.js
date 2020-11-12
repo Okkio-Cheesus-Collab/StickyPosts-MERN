@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import CardSection from "./Components/CardSection/CardSection";
 import { DragDropContext } from "react-beautiful-dnd";
-
+import Sidebar from '../../ConstantComponents/SideBar/Sidebar'
+import classes from './Board.module.css'
 import { v4 } from "uuid";
 
 const testData = {
@@ -56,7 +57,9 @@ const Board = (props) => {
     }
 
     return (
-        <div style={{ width: "100vw", height: "100vh", overflowY: "hidden" }}>
+    <div className={classes.boardWrapper} >
+        <Sidebar/>
+        <div style={{ width: "100%", height: "100%", overflowY: "hidden", zIndex:6 }}>
             <DragDropContext
                 onDragEnd={onDragEnd}>
                 {
@@ -73,7 +76,7 @@ const Board = (props) => {
             </DragDropContext>
 
         </div>
-
+    </div>
     );
 
 }

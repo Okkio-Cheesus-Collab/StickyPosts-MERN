@@ -6,6 +6,14 @@
     height:64px;
     align-items: center;
     background-color: white;
+    justify-content: center;
+    z-index: 8;
+}
+.linksContainer {
+    display: flex;
+    width:70%;
+    max-width:800px;
+    justify-content: space-between;
 }
 .logoBundle h1{
     color:black;
@@ -27,13 +35,11 @@ a:hover {
 }
 .logoBundle {
     display: flex;
-    margin-left:15%;
-    margin-right:auto;
     cursor: pointer;
 }
 .navButtons {
-    margin-right:25%;
-    margin-top:auto;
+    margin: 0;
+    padding:0;
 }
 .loginButton {
     color:black;

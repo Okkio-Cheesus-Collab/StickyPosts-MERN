@@ -7,6 +7,7 @@
     background-color: rgb(46, 46, 46);
     width:80px;
     height:100%;
+    font-family: "Whitney";
 }
 .sidebarBody_active{
     transition-delay: 500ms;
@@ -113,6 +114,7 @@
 }
 .buttonContainer{
     cursor: pointer;
+    height:80px;
 }
 .boardButton {
     transition: 160ms ease-in-out ;
@@ -128,14 +130,14 @@
     z-index: 7;
 }
 .buttonBanner {
-    transition: 160ms ease-in-out ;
+    transition: 180ms ease-in-out ;
     color:white;
-    
     line-height: 50px;
-    font-size: 0px;
+    font-size:0px;
     border-radius: 35px;
     background-color: rgb(90, 51, 105);
     width:55px;
+    padding-left:30px;
     height:55px;
     position: absolute;
     left:10px;
@@ -145,7 +147,7 @@
     margin-left:10px;
     transition-delay: 500ms;
     width:185px;
-    font-size: 22px;
+    font-size: 20px;
 }
 
 
