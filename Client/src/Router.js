@@ -5,7 +5,7 @@ const Navbar = lazy(() => import("./ConstantComponents/NavBar/Navbar"));
 
 const Home = lazy(() => import("./pages/Home/Home"));
 
-const Board = lazy(() => import("./pages/Board/Board"));
+const Board = lazy(() => import("./pages/board/Board"));
 
 const Auth = lazy(() => import("./pages/Auth/Auth"));
 

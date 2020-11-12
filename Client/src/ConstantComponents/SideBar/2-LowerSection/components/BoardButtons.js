@@ -3,8 +3,8 @@ import classes from '../../../CSS/Sidebar.module.css';
 
 
 const SidebarBtn = (props) => {
-    let name = 'Okkio'
-    const [boardName,setBoardName] = useState();
+    let name = props.boardName
+    
     
     return (
         <div className={classes.buttonContainer}>

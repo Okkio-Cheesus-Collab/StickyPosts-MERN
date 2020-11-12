@@ -6,7 +6,8 @@
     align-items: center;
 }
 .AuthContainer {
-    width:556px;
+    transition: 250ms;
+    width:520px;
     height:700px;
     background-color: rgb(44, 47, 49);
     border-radius: 20px;
@@ -39,11 +40,23 @@
     display:flex;
     justify-content: space-evenly;
     flex-direction: column;
-    margin-bottom: auto;
     margin-top:0;
-    height:70%;
+    height:100%;
+}
+.inputFieldsSignup {
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-top:0;
+    height:100%;
+}
+.inputFields input {
+    color:white;
+    font-size: 20px;
+    padding-left: 20px;
 }
 .authFieldLabel {
+    padding-left: 18px;
     color:rgb(150, 148, 148);
     font-size:18px;
 
@@ -69,7 +82,7 @@
 .loginButton {
     width:100%;
     color:rgb(255, 255, 255);
-    font-size: 32px;
+    font-size: 2em;
     height:70px;
     background-color: rgb(52, 141, 209);
     border-radius: 50px;
@@ -89,8 +102,28 @@
     margin:0;
     color:rgb(97, 97, 97);
 }
+.authMode {
+    display: flex;
+    flex-direction: row;
+    margin-top:10px;
+    justify-content: center;
+}
+.loginMode {
+    margin-left:5px !important;
+    color:rgb(31, 171, 252) !important;
+    cursor: pointer;
+}
+.loginMode:hover {
+    color:rgb(110, 202, 255) !important;
 
-
-.authFieldLabel,.welcomeMessage,.welcomeLabel,.loginSection {
+}
+.errors {
+    color:rgb(255, 97, 97);
+    margin:0;
+    padding:0;
+    margin-bottom: 20px;
+    align-self: center;
+}
+.AuthContainer {
     font-family: "Whitney" ;
 }
