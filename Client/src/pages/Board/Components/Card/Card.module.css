@@ -1,3 +1,8 @@
 .card {
     height: 55px;
+    outline: none;
+}
+
+.card:focus {
+    outline: none;
 }

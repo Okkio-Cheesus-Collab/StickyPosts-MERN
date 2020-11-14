@@ -3,7 +3,7 @@ import CardSection from "./Components/CardSection/CardSection";
 import { DragDropContext } from "react-beautiful-dnd";
 import Sidebar from '../../ConstantComponents/SideBar/Sidebar'
 import classes from './Board.module.css'
-import { v4 } from "uuid";
+import background from '../../Assets/Background/background.jpg';
 
 const testData = {
     tasks: {
@@ -23,12 +23,33 @@ const testData = {
 }
 
 
+
 const Board = (props) => {
     const [data, setData] = useState(testData);
 
-    useEffect(() => {
-        console.log(data);
-    }, [data]);
+    // useEffect(() => {
+    //     console.log(data);
+    // }, [data]);
+
+    const addTask = (column, task) => {
+        if (!data.columns[column.id]) {
+            return;
+        }
+
+        setData((prevData) => {
+            const newData = {
+                tasks: { ...prevData.tasks, [task.id]: task },
+                columns: {
+                    ...prevData.columns,
+                    [column.id]: { ...column, taskIds: [...column.taskIds, task.id] }
+                },
+                columnOrder: [...prevData.columnOrder]
+            }
+            return newData;
+        });
+
+        //Send to Db
+    }
 
     const onDragEnd = (result) => {
         const { destination, source, draggableId } = result;
@@ -57,26 +78,33 @@ const Board = (props) => {
     }
 
     return (
-    <div className={classes.boardWrapper} >
-        <Sidebar/>
-        <div style={{ width: "100%", height: "100%", overflowY: "hidden", zIndex:6 }}>
-            <DragDropContext
-                onDragEnd={onDragEnd}>
-                {
-                    data.columnOrder.map((columnId) => {
-                        const column = data.columns[columnId];
-                        const tasks = column.taskIds.map(taskId => data.tasks[taskId]);
-                        return <CardSection
-                            key={columnId}
-                            title={column.title}
-                            columnId={columnId}
-                            tasks={tasks} />
-                    })
-                }
-            </DragDropContext>
-
+        <div className={classes.boardWrapper} >
+            <Sidebar />
+            <div style={{
+                width: "100%",
+                height: "100%",
+                overflowY: "hidden",
+                zIndex: 6,
+                backgroundImage: `url(${background})`,
+                backgroundPosition: "center",
+                backgroundSize: "cover"
+            }}>
+                <DragDropContext
+                    onDragEnd={onDragEnd}>
+                    {data ?
+                        data.columnOrder.map((columnId) => {
+                            const column = data.columns[columnId];
+                            const tasks = column.taskIds.map(taskId => data.tasks[taskId]);
+                            return <CardSection
+                                key={columnId}
+                                column={column}
+                                tasks={tasks}
+                                addTask={addTask} />
+                        }) : <p>Loading...</p>
+                    }
+                </DragDropContext>
+            </div>
         </div>
-    </div>
     );
 
 }

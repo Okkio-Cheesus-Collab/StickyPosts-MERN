@@ -12,17 +12,13 @@ const Card = (props) => {
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}
-
                 >
                     <Todo task={props.task} />
                     <div className=" d-flex justify-content-end my-auto">
                         <MoreVertical size={20} style={{ cursor: "pointer" }} />
                     </div>
                 </div >
-            )
-
-            }
-
+            )}
         </Draggable>
 
     );
