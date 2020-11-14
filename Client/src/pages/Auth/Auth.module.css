@@ -60,6 +60,10 @@
 
 .inputFields input {
     color: white;
+=======
+.inputFieldsSignup input, .inputFields input {
+    color:white;
+>>>>>>> Stashed changes
     font-size: 20px;
     padding-left: 20px;
 }

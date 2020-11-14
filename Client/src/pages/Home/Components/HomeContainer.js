@@ -7,7 +7,7 @@ import Bg from './BackgroundShapes'
 const HomeContainer = () => {
     return(
     <div className={classes.homeContainer}>
-        <Bg></Bg>
+        <Bg/>
         <div className={classes.homeCard}>
             
             <label className={classes.welcomeLabel}>Stick it and Stick to it</label>

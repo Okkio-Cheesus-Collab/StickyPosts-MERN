@@ -16,11 +16,11 @@ const Signup = (props) => {
                     </div>
                     <div>
                         <label className={classes.authFieldLabel}>Password</label>
-                        <input className={classes.authField}></input>
+                        <input className={classes.authField}type="password"></input>
                     </div>
                     <div>
                         <label className={classes.authFieldLabel}>Confirm Password</label>
-                        <input className={classes.authField}></input>
+                        <input className={classes.authField} type="password"></input>
                     </div>
                     <p className={classes.errors}></p>
                 </div>
