@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import classes from '../Auth.module.css'
 import Login from './Login'
 import Signup from './Signup'
+import Bg from '../../Home/Components/BackgroundShapes'
 
 const AuthContainer = () => {
     const [loginOrSignup,setLoginOrSignup] = useState(true)
@@ -21,7 +22,7 @@ const AuthContainer = () => {
         },200)
         
     }
-    return(
+    return(<>
     <div className={classes.AuthWrapper} >
         <div className={classes.AuthContainer}style={style}>
             { loginOrSignup ?
@@ -35,6 +36,7 @@ const AuthContainer = () => {
             }
         </div>
     </div>
+    </>
     )
 }
 export default AuthContainer;

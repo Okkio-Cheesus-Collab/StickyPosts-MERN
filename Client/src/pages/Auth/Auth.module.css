@@ -4,17 +4,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(245, 222, 179, 0);
+    z-index:4;
 }
 
 .AuthContainer {
     transition: 250ms;
     width: 520px;
     height: 700px;
-    background-color: rgb(44, 47, 49);
+    background-color: var(--theme-primary);
     border-radius: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    -webkit-box-shadow: 0px 0px 22px -7px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 0px 22px -7px rgba(0,0,0,0.6);
+    box-shadow: 0px 0px 16px -7px rgba(0,0,0,0.6);
+    z-index: 6;
 }
 
 .welcomeMessage {
@@ -25,7 +31,7 @@
 
 .welcomeLabel {
     margin-top: 25px;
-    color: white;
+    color: var(--text);
     font-size: 32px;
     font-weight: 500;
 }
@@ -33,6 +39,7 @@
 .welcomeMessage p {
     color: rgb(150, 148, 148);
     font-size: 18px;
+    margin:0;
 }
 
 .inputContainer {
@@ -57,33 +64,27 @@
     margin-top: 0;
     height: 100%;
 }
-<<<<<<< Updated upstream
-
-.inputFields input {
-    color: white;
-=======
 .inputFieldsSignup input, .inputFields input {
-    color:white;
->>>>>>> Stashed changes
+    color:var(--theme-text);
     font-size: 20px;
     padding-left: 20px;
 }
 
 .authFieldLabel {
     padding-left: 18px;
-    color: rgb(150, 148, 148);
+    color: var(--text);
     font-size: 18px;
 }
 
 .authField {
-    background-color: rgb(56, 56, 56);
+    background-color: var(--theme-secondary);
     border: none;
     width: 100%;
     height: 45px;
     outline: none;
     border: none;
     border-radius: 20px;
-    caret-color: white;
+    caret-color: var(--theme-text);
 }
 
 .authField:focus {
@@ -100,7 +101,7 @@
     color: rgb(255, 255, 255);
     font-size: 2em;
     height: 70px;
-    background-color: rgb(52, 141, 209);
+    background-color: rgb(37, 161, 255);
     border-radius: 50px;
     outline: none !important;
     border: none !important;
@@ -108,18 +109,18 @@
 }
 
 .loginButton:hover {
-    background-color: rgb(30, 115, 180);
+    background-color: rgb(0, 145, 255);
 }
 
 .loginButton:active {
-    background-color: rgb(166, 207, 241);
-    color: rgb(56, 55, 55);
+    background-color: rgb(0, 238, 255);
+    color: rgb(0, 0, 0);
 }
 
 .loginSection p {
     padding: 0;
     margin: 0;
-    color: rgb(97, 97, 97);
+    color: var(--text);
 }
 
 .authMode {

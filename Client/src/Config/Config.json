@@ -1,0 +1,10 @@
+{
+    "darkMode":{
+        "primary":"#2e2e2e",
+        "secondary":"#fff"
+    },
+    "lightMode":{
+        "primary":"#fff",
+        "secondary":"#d3d3d3"
+    }
+}

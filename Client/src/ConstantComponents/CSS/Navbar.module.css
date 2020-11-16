@@ -53,3 +53,11 @@ a:hover {
 .loginButton:hover {
     color: rgb(1, 121, 212);
 }
+:root {
+    --theme-primary:#fff;
+    --theme-secondary:#f0f0f0;
+    --theme-text:#2e2e2e;
+    --theme-filter:invert(100%) sepia(0%) saturate(27%) hue-rotate(132deg) brightness(89%) contrast(83%);
+    --theme-click:rgb(123, 205, 253);
+
+}

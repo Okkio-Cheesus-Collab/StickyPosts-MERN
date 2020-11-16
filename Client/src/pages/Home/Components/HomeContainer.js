@@ -2,12 +2,10 @@ import React from 'react';
 import classes from '../Home.module.css';
 import {Link} from 'react-router-dom';
 import Postits from '../../../Assets/Background/Color_Post_it.svg';
-import Sidebar from '../../../ConstantComponents/SideBar/Sidebar';
-import Bg from './BackgroundShapes'
 const HomeContainer = () => {
     return(
     <div className={classes.homeContainer}>
-        <Bg/>
+        
         <div className={classes.homeCard}>
             
             <label className={classes.welcomeLabel}>Stick it and Stick to it</label>

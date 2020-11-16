@@ -7,77 +7,83 @@ const Bg = () => {
     return(
         <div className={classes.homeBGContainer}>
             <div className={classes.homeBG}>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>
+                <img src={svgBg} alt="BG"/>
                 <span/>
-                <img src={svgBg}/>  
+                <img src={svgBg} alt="BG"/>
+                <span/>
+                <img src={svgBg} alt="BG"/>
+                <span/>
+                <img src={svgBg} alt="BG"/>
+                <span/>
+                <img src={svgBg} alt="BG"/>
+                <span/>
+                <img src={svgBg} alt="BG"/>
             </div>
         </div>
         )

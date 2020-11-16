@@ -4,7 +4,7 @@
     height:calc(100% - 60px);
     z-index: 5;
     transition: 220ms ease-in-out;
-    background-color: rgb(46, 46, 46);
+    background-color: var(--theme-primary);
     width:80px;
     height:100%;
     font-family: "Whitney";
@@ -27,7 +27,7 @@
     cursor: pointer;
 }
 .nameCardContainer .profileIcon {
-    color:white;
+    color:var(--theme-text);
     line-height: 50px;
     font-size: 22px;
     margin-bottom: auto;
@@ -36,7 +36,7 @@
     min-width:55px;
     height:55px;
     border-radius: 35px;
-    border:2px solid white;
+    border:2px solid var(--theme-text);
     pointer-events: none;
 }
 
@@ -48,7 +48,7 @@
     line-height: 53px;
     font-size: 22px;
     font-family: "Whitney";
-    color:white;
+    color:var(--theme-text);
 }
 .sidebarBody:hover .Name {
     opacity: 1;
@@ -56,7 +56,7 @@
 .createButton {
     transition: 160ms ease-in-out ;
     margin-top:30px;
-    color:white;
+    color:var(--theme-text);
     line-height: 50px;
     font-size: 22px;
     margin-left:10px;
@@ -64,7 +64,7 @@
     width:55px;
     height:55px;
     border-radius: 35px;
-    border:2px solid white;
+    border:2px solid var(--theme-text);
     cursor: pointer;
     display: flex;
     flex-direction: row;
@@ -78,14 +78,17 @@
     transition: 80ms ease-out!important;
 }
 .createButton:active {
-    background-color: rgb(50, 166, 255);
+    background-color: var(--theme-click);
 }
-.createBtnSvg {
+
+.createButton img{
     transition: 160ms ease-in-out ;
     width:20px;
     margin-left:15px;
+    filter: var(--theme-filter);
 }
 .createBtnTxt {
+    color:var(--theme-text);
     font-size:0px;
     margin-left:10px;
     white-space: nowrap;
@@ -105,7 +108,7 @@
     margin-right: auto;
     margin-left: auto;
     height:1px;
-    background-color: white;
+    background-color: var(--theme-text);
 }
 .lowerBoard {
     margin-top:10px;

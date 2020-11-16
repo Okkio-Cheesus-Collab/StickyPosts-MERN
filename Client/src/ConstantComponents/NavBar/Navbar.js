@@ -2,10 +2,11 @@ import React from 'react';
 import classes from '../CSS/Navbar.module.css';
 import Logo from '../../Assets/logo/logo.png';
 import {Link} from 'react-router-dom';
+import Bg from '../../pages/Home/Components/BackgroundShapes'
 
 
 const Navbar = () => {
-    return(
+    return(<>
     <nav className={classes.navBody}>
         <div className={classes.linksContainer}>
             <Link to="/" className={classes.logoBundle}>
@@ -17,6 +18,8 @@ const Navbar = () => {
             </ul>
         </div>
     </nav>
+    <Bg/>
+    </>
     )
 }
 
