@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import themeJson from './Config/Config.json'
 
 const Navbar = lazy(() => import("./ConstantComponents/NavBar/Navbar"));
 
@@ -9,7 +10,17 @@ const Board = lazy(() => import("./pages/Board/Board"));
 
 const Auth = lazy(() => import("./pages/Auth/Auth"));
 
-
+const themePref = themeJson[JSON.parse(localStorage.getItem('theme'))]
+const sheet = document.styleSheets[0];
+        sheet.insertRule(`:root{
+            --theme-primary:${themePref.primary};
+            --theme-secondary:${themePref.secondary};
+            --theme-text:${themePref.text};
+            --theme-filter:${themePref.filter};
+            --theme-click:${themePref.click}; 
+            --theme-bg:${themePref.bg};
+            --theme-fields:${themePref.fields}; 
+        }`);
 const AppRouter = () => (
     <Router>
         <Suspense fallback={<p>Loading...</p>}>

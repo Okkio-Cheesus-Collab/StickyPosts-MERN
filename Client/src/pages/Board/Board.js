@@ -57,12 +57,12 @@ const Board = (props) => {
         const sheet = document.styleSheets[0];
         sheet.insertRule(`:root{
             --theme-primary:${themePref.primary};
-            --theme-secondary:${themePref.secondary}
-            --theme-text:${themePref.text}
-            --theme-filter:${themePref.filter}
-            --theme-click:${themePref.click} 
-            --theme-bg:${themePref.bg}
-            --theme-fields:${themePref.fields} 
+            --theme-secondary:${themePref.secondary};
+            --theme-text:${themePref.text};
+            --theme-filter:${themePref.filter};
+            --theme-click:${themePref.click} ;
+            --theme-bg:${themePref.bg};
+            --theme-fields:${themePref.fields}; 
         }`);
     },[])
     const rootStyle = document.getElementById("root").style
