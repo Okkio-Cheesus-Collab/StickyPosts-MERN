@@ -2,8 +2,9 @@ import React, { useState, useRef } from 'react';
 import classes from '../CSS/Sidebar.module.css';
 import UpperContainer from './1-UpperSection/UpperContainer'
 import LowerContainer from './2-LowerSection/LowerContainer'
+import ThemeSelect from '../ThemeSelect/ThemeSelect'
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     const [sidebarExpanded,setSidebarExpanded] = useState(false)
     let expandTimer = useRef();
     
@@ -40,7 +41,7 @@ const Sidebar = () => {
             <div className={classes.sideBarDivider} />
 
             <LowerContainer toggleHoverDynamic={toggleHoverDynamic} />
-
+            <ThemeSelect themePref={props.themePref} toggleTheme={props.toggleTheme} toggleHoverDynamic={toggleHoverDynamic}/>
         </div>
     )
 }

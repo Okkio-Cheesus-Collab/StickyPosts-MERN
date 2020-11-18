@@ -2,7 +2,10 @@
     margin: 20px;
 }
 .boardWrapper {
+    position: relative;
     width:100%;
     height:100%;
     display: flex;
+    z-index: 6;
+    overflow: hidden;
 }

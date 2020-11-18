@@ -31,7 +31,7 @@
 
 .welcomeLabel {
     margin-top: 25px;
-    color: var(--text);
+    color: var(--theme-text);
     font-size: 32px;
     font-weight: 500;
 }
@@ -72,12 +72,12 @@
 
 .authFieldLabel {
     padding-left: 18px;
-    color: var(--text);
+    color: var(--theme-text);
     font-size: 18px;
 }
 
 .authField {
-    background-color: var(--theme-secondary);
+    background-color: var(--theme-fields);
     border: none;
     width: 100%;
     height: 45px;
@@ -120,7 +120,7 @@
 .loginSection p {
     padding: 0;
     margin: 0;
-    color: var(--text);
+    color: var(--theme-text);
 }
 
 .authMode {

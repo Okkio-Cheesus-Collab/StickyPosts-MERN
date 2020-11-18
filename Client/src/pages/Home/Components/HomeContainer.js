@@ -3,6 +3,7 @@ import classes from '../Home.module.css';
 import {Link} from 'react-router-dom';
 import Postits from '../../../Assets/Background/Color_Post_it.svg';
 const HomeContainer = () => {
+    
     return(
     <div className={classes.homeContainer}>
         

@@ -1,8 +1,6 @@
 .sidebarBody {
     padding:0;
-    width: 100%;
-    height:calc(100% - 60px);
-    z-index: 5;
+    z-index: 3;
     transition: 220ms ease-in-out;
     background-color: var(--theme-primary);
     width:80px;
@@ -42,7 +40,7 @@
 
 .nameCardContainer .Name {
     opacity: 0;
-    z-index: 6;
+    z-index: 4 ;
     padding-left:30px;
     transition: 150ms ease-in-out ;
     line-height: 53px;
@@ -95,6 +93,10 @@
     font-family: "Whitney";
     opacity:0;
     transition: 160ms ease-in-out ;
+    
+}
+a {
+    text-decoration: none !important;
 }
 .sidebarBody_active .createBtnTxt{
     opacity:1;
@@ -130,7 +132,7 @@
     height:55px;
     position: absolute;
     left:10px;
-    z-index: 7;
+    z-index: 4;
 }
 .buttonBanner {
     transition: 180ms ease-in-out ;
@@ -144,7 +146,7 @@
     height:55px;
     position: absolute;
     left:10px;
-    z-index: 6;
+    z-index: 3;
 }
 .sidebarBody_active .buttonBanner{
     margin-left:10px;
@@ -154,3 +156,36 @@
 }
 
 
+.toggleContainer {
+    position: absolute;
+    display: flex;
+    height:30px;
+    left:15px;
+    width:50px;
+    bottom: 10px;
+    justify-content: center;
+    cursor: pointer;
+}
+.sidebarBody_active .toggleContainer{
+    transition-delay: 500ms;
+    width: 185px;
+}
+.toggleBody {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: white;
+    width:55px;
+    height:25px;
+    border-radius: 25px;
+}  
+.toggleKnob {  
+    transition: 100ms ease-in-out;
+
+    margin-left:1px;
+    margin-right: 1px;
+    width:24px;
+    clip-path: circle(50%);
+    height:24px;
+    background-color: teal;
+} 

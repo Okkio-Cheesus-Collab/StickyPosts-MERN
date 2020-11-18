@@ -4,6 +4,7 @@ import { DragDropContext } from "react-beautiful-dnd";
 import Sidebar from '../../ConstantComponents/SideBar/Sidebar'
 import classes from './Board.module.css'
 import background from '../../Assets/Background/background.jpg';
+import themeJson from '../../Config/Config.json'
 
 const testData = {
     tasks: {
@@ -21,10 +22,55 @@ const testData = {
     },
     columnOrder: ["Column-1"]
 }
+const getUserPref = () => {
+    const userPref = localStorage.getItem('theme')
+    
+    if (userPref == 'undefined') {
+        return themeJson.tempPref
+    } else {
+        return JSON.parse(userPref)
 
-
-
+    }
+}
 const Board = (props) => {
+    const [themePref,setThemePref] = useState(getUserPref());
+    const [toggleThemeState,setToggleThemeState] = useState();
+    const toggleTheme = (toggle) => {
+        console.log(toggle)
+        if(toggle){
+            localStorage.setItem('theme', JSON.stringify('lightMode'))
+        } else {
+            localStorage.setItem('theme', JSON.stringify('darkMode'))
+            
+        }
+        setThemePref(getUserPref())
+    }
+    const sheet = document.documentElement.style
+    sheet.setProperty('--theme-primary', `${themeJson[themePref].primary}`);
+    sheet.setProperty('--theme-secondary', `${themeJson[themePref].secondary}`);
+    sheet.setProperty('--theme-text', `${themeJson[themePref].text}`);
+    sheet.setProperty('--theme-filter', `${themeJson[themePref].filter}`);
+    sheet.setProperty('--theme-click', `${themeJson[themePref].click}`);
+    sheet.setProperty('--theme-bg', `${themeJson[themePref].bg}`);
+    sheet.setProperty('--theme-fields', `${themeJson[themePref].fields}`);
+    useEffect(() => {
+        const sheet = document.styleSheets[0];
+        sheet.insertRule(`:root{
+            --theme-primary:${themePref.primary};
+            --theme-secondary:${themePref.secondary}
+            --theme-text:${themePref.text}
+            --theme-filter:${themePref.filter}
+            --theme-click:${themePref.click} 
+            --theme-bg:${themePref.bg}
+            --theme-fields:${themePref.fields} 
+        }`);
+    },[])
+    const rootStyle = document.getElementById("root").style
+    rootStyle.height=`${100}%`;
+    rootStyle.marginTop=0;
+
+
+    // Just some theme code above, location temporary till I look for where to best leave it ~ Okkio
     const [data, setData] = useState(testData);
 
     // useEffect(() => {
@@ -79,7 +125,7 @@ const Board = (props) => {
 
     return (
         <div className={classes.boardWrapper} >
-            <Sidebar />
+            <Sidebar themePref={themePref} toggleTheme={toggleTheme}/>
             <div style={{
                 width: "100%",
                 height: "100%",
@@ -87,9 +133,10 @@ const Board = (props) => {
                 zIndex: 6,
                 backgroundImage: `url(${background})`,
                 backgroundPosition: "center",
-                backgroundSize: "cover"
-            }}>
-                <DragDropContext
+                backgroundSize: "cover",
+                backgroundAttachment:"fixed"
+                }}>
+                    <DragDropContext
                     onDragEnd={onDragEnd}>
                     {data ?
                         data.columnOrder.map((columnId) => {

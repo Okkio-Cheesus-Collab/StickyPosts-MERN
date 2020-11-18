@@ -9,28 +9,36 @@ const Board = lazy(() => import("./pages/Board/Board"));
 
 const Auth = lazy(() => import("./pages/Auth/Auth"));
 
+
 const AppRouter = () => (
     <Router>
         <Suspense fallback={<p>Loading...</p>}>
-            <Route
-                path="/"
-                component={Navbar} />
             <Switch>
-                <Route
-                    exact
-                    path="/"
-                    component={Home} />
                 <Route
                     exact
                     path="/board"
                     component={Board} />
-                <Route
-                    exact
-                    path="/login"
-                    component={Auth} />
+                <Route component={NavRequired}/>
+                
             </Switch>
         </Suspense>
     </Router>
 );
+const NavRequired = () => (
+    <>
+    {window.location.pathname !== "/board" ?
+                    <Route component={Navbar}/>
+                    : null
+                }
+    <Route
+        exact
+        path="/login"
+        component={Auth} />
+    <Route
+        exact
+        path="/"
+        component={Home} />
+    </>                
+)
 
 export default AppRouter;
