@@ -19,7 +19,7 @@ const CardSection = (props) => {
     return (
         <div className={Classes.cardSection}>
             <div className={Classes.cardHolder + " d-flex flex-column my-5 mx-4"}>
-                <div className="h4 text-capitalize px-3 pt-4">{props.column.title}</div>
+                <div className={"h4 text-capitalize px-3 pt-4"}>{props.column.title}</div>
                 <div className="d-flex flex-row flex-fill">
                     <Scrollbars className="position-relative" autoHide>
                         <Droppable droppableId={props.column.id}>

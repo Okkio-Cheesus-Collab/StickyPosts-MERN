@@ -13,6 +13,13 @@ const ThemeSelect = (props) => {
         }
     }
     const toggleTheme = () => {
+        // document.getElementById('root').style.cssText =
+        // `-webkit-transition: none !important;
+        // -moz-transition: none !important;
+        // -o-transition: none !important;
+        // transition: none !important;
+        // transition-delay: 0s !important;`
+        // document.getElementById('root').style.transitionDelay= "0s"
         let temp = theme
         setTheme(!temp)
         props.toggleTheme(temp)

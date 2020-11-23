@@ -1,6 +1,8 @@
 .card {
     height: 55px;
     outline: none;
+    background-color: var(--theme-fields);
+    color: var(--theme-text);
 }
 
 .card:focus {

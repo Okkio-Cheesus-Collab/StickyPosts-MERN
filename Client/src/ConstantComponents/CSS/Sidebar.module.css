@@ -66,6 +66,8 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    
 }
 .sidebarBody_active .createButton{
     transition-delay: 500ms;
@@ -73,22 +75,23 @@
 }
 .createButton:hover{
     transition-delay: 0s;
-    transition: 80ms ease-out!important;
+    transition: 80ms ease-out;
 }
 .createButton:active {
     background-color: var(--theme-click);
 }
 
-.createButton img{
+.createBtnSvg{
     transition: 160ms ease-in-out ;
-    width:20px;
-    margin-left:15px;
-    filter: var(--theme-filter);
+    margin-left:5px;
+    min-width:40px;
+    height:40px;
+    color:var(--theme-text)
 }
 .createBtnTxt {
     color:var(--theme-text);
+    padding:0;
     font-size:0px;
-    margin-left:10px;
     white-space: nowrap;
     font-family: "Whitney";
     opacity:0;
@@ -188,4 +191,11 @@ a {
     clip-path: circle(50%);
     height:24px;
     background-color: teal;
-} 
+}
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    transition-delay: 0s !important;
+  } 

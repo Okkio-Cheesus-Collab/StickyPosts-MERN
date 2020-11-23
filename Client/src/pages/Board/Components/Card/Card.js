@@ -8,7 +8,7 @@ const Card = (props) => {
     return (
         <Draggable draggableId={props.task.id} index={props.index}>
             {(provided, snapshot) => (
-                <div className={Classes.card + " border d-flex justify-content-between mx-0 my-2 bg-primary py-1 pr-3"}
+                <div className={Classes.card + " d-flex justify-content-between mx-0 my-2 py-1 pr-3"}
                     {...provided.draggableProps}
                     {...provided.dragHandleProps}
                     ref={provided.innerRef}

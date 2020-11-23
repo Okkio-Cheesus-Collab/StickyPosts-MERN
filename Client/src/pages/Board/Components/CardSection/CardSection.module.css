@@ -1,10 +1,11 @@
 .cardSection {
     height: 100%;
     width: fit-content;
+    color:var(--theme-text)
 }
 
 .cardHolder {
-    background-color: white;
+    background-color: var(--theme-primary);
     height: 80%;
     width: 400px;
     border-radius: 10px;
@@ -23,7 +24,7 @@
 
 .addInput {
     color: black;
-    background-color: white;
+    background-color: var(--theme-fields);
     border: solid 1px lightgrey;
     height: 45px;
     outline: none;
@@ -36,7 +37,7 @@
 
 .addSubmit {
     color: darkgrey;
-    background-color: white;
+    background-color: var(--theme-primary);
     border: solid 1px lightgrey;
     height: 45px;
     width: 45px;

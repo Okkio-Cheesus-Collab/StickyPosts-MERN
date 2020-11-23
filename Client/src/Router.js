@@ -10,16 +10,21 @@ const Board = lazy(() => import("./pages/Board/Board"));
 
 const Auth = lazy(() => import("./pages/Auth/Auth"));
 
-const themePref = themeJson[JSON.parse(localStorage.getItem('theme'))]
+let themePref = JSON.parse(localStorage.getItem('theme'))
+
+if (themePref !== 'lightMode' && themePref !== 'darkMode') {
+    themePref = themeJson.tempPref
+} 
+
 const sheet = document.styleSheets[0];
         sheet.insertRule(`:root{
-            --theme-primary:${themePref.primary};
-            --theme-secondary:${themePref.secondary};
-            --theme-text:${themePref.text};
-            --theme-filter:${themePref.filter};
-            --theme-click:${themePref.click}; 
-            --theme-bg:${themePref.bg};
-            --theme-fields:${themePref.fields}; 
+            --theme-primary:${themeJson[themePref].primary};
+            --theme-secondary:${themeJson[themePref].secondary};
+            --theme-text:${themeJson[themePref].text};
+            --theme-filter:${themeJson[themePref].filter};
+            --theme-click:${themeJson[themePref].click}; 
+            --theme-bg:${themeJson[themePref].bg};
+            --theme-fields:${themeJson[themePref].fields}; 
         }`);
 const AppRouter = () => (
     <Router>
